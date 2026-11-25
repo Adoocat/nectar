@@ -1,0 +1,114 @@
+{
+	"nodes": [
+		{
+			"id": "grp1",
+			"type": "group",
+			"x": -60,
+			"y": -80,
+			"width": 860,
+			"height": 420,
+			"label": "Nectar",
+			"color": "2"
+		},
+		{
+			"id": "txt1",
+			"type": "text",
+			"x": -20,
+			"y": -20,
+			"width": 300,
+			"height": 140,
+			"text": "# Metin kartı\n\n**Markdown** destekler ve [[Hedef not]] linki içerir.",
+			"color": "6"
+		},
+		{
+			"id": "file1",
+			"type": "file",
+			"x": 360,
+			"y": -20,
+			"width": 400,
+			"height": 320,
+			"file": "02 Bağlantılar/Hedef not.md"
+		},
+		{
+			"id": "file2",
+			"type": "file",
+			"x": -20,
+			"y": 160,
+			"width": 300,
+			"height": 140,
+			"file": "02 Bağlantılar/Hedef not.md",
+			"subpath": "#Birinci bölüm"
+		},
+		{
+			"id": "img1",
+			"type": "file",
+			"x": 880,
+			"y": -20,
+			"width": 320,
+			"height": 200,
+			"file": "Ekler/şeftali.png"
+		},
+		{
+			"id": "link1",
+			"type": "link",
+			"x": 880,
+			"y": 220,
+			"width": 320,
+			"height": 160,
+			"url": "https://obsidian.md/help"
+		},
+		{
+			"id": "txt2",
+			"type": "text",
+			"x": 360,
+			"y": 380,
+			"width": 400,
+			"height": 80,
+			"text": "Renksiz, gruba dahil olmayan kart"
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "txt1",
+			"fromSide": "right",
+			"toNode": "file1",
+			"toSide": "left",
+			"label": "açıklar"
+		},
+		{
+			"id": "e2",
+			"fromNode": "file1",
+			"fromSide": "right",
+			"toNode": "img1",
+			"toSide": "left",
+			"color": "1",
+			"toEnd": "arrow"
+		},
+		{
+			"id": "e3",
+			"fromNode": "file1",
+			"fromSide": "bottom",
+			"toNode": "txt2",
+			"toSide": "top",
+			"fromEnd": "arrow",
+			"toEnd": "arrow"
+		},
+		{
+			"id": "e4",
+			"fromNode": "txt1",
+			"fromSide": "bottom",
+			"toNode": "file2",
+			"toSide": "top",
+			"toEnd": "none"
+		},
+		{
+			"id": "e5",
+			"fromNode": "img1",
+			"fromSide": "bottom",
+			"toNode": "link1",
+			"toSide": "top",
+			"color": "#FFBE98"
+		}
+	]
+}

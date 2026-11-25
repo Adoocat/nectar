@@ -27,7 +27,8 @@ apps/web        Vue 3 UI
 apps/server     local server
   src/security/ token, host/origin checks, path confinement  (CODEOWNERS: maintainer)
 packages/core   shared types, Markdown/link/tag parsing, vault model
-docs/           FEATURES, ARCHITECTURE, DESIGN
+docs/           FEATURES, ARCHITECTURE, DESIGN, DECISIONS, design/ mockups
+tests/fixtures/test-vault   reference vault for unit and e2e tests
 ```
 
 ## Responsibilities

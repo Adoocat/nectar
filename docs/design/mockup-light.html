@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nectar mockup (light)</title>
+<!-- Design reference only. Source of truth for tokens: docs/DESIGN.md. Fonts are loaded from Google here for preview;
+     the real app must bundle them locally. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#FFF9F5} button{font:inherit;color:inherit}</style>
+</head>
+<body>
+<div style="display: flex; flex-wrap: wrap; width: 100%; min-height: 900px; background: #FFF9F5; color: #2E1F18; font-family: Inter, system-ui, sans-serif; font-size: 13px; line-height: 1.45">
+
+<nav aria-label="Ribbon" style="flex: 0 0 48px; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 0; background: #FFF1E8; border-right: 1px solid #F3DDCF; color: #7A5E51">
+<div aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 12px; border-radius: 50%; background: #FFBE98; box-shadow: inset -5px -5px 0 rgba(180,71,31,0.25)"></div>
+<button aria-label="Dosyalar" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: #FFE0CC; color: #2E1F18; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/></svg></button>
+<button aria-label="Ara" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></button>
+<button aria-label="Graph view" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.3 8.1 10.8 16M15.9 7.4 13.2 15.9M8.5 6.8l7-.6"/></svg></button>
+<button aria-label="Canvas" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="13" width="8" height="7" rx="1.5"/><path d="M11 7.5h3.5a2 2 0 0 1 2 2V13"/></svg></button>
+<button aria-label="Bugünün notu" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></button>
+<div style="flex: 1"></div>
+<button aria-label="Ayarlar" style="width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
+</nav>
+
+<aside aria-label="Dosya gezgini" style="flex: 1 1 236px; max-width: 260px; display: flex; flex-direction: column; background: #FFF1E8; border-right: 1px solid #F3DDCF">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 14px 10px">
+<div style="font-weight: 600; font-size: 13px">nectar-test-vault</div>
+<button aria-label="Yeni not" style="width: 28px; height: 28px; border: 0; border-radius: 8px; background: transparent; color: #7A5E51; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+</div>
+<label style="margin: 0 12px 10px; display: flex; align-items: center; gap: 8px; padding: 0 10px; height: 32px; border-radius: 8px; background: #FFFFFF; border: 1px solid #F3DDCF; color: #7A5E51">
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+<input aria-label="Dosyalarda ara" placeholder="Ara" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #2E1F18; font: inherit">
+<span style="font-size: 11px; padding: 1px 6px; border-radius: 6px; border: 1px solid #F3DDCF">Ctrl O</span>
+</label>
+<div style="display: flex; flex-direction: column; gap: 1px; padding: 0 8px 12px">
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(0deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>01 Markdown</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(90deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>02 Bağlantılar</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:44px;background:transparent;font-weight:400;color:#7A5E51"><span>Embed'ler</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:44px;background:transparent;font-weight:400;color:#7A5E51"><span>Hedef not</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:44px;background:transparent;font-weight:400;color:#7A5E51"><span>Wikilinks</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(0deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>03 Meta</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(0deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>Ekler</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(0deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>Günlük</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:8px;background:transparent;font-weight:500;color:#2E1F18"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" style="flex:none;transform:rotate(0deg);color:#7A5E51"><path d="m9 6 6 6-6 6"/></svg><span>Projeler</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:26px;background:#FFE0CC;font-weight:500;color:#2E1F18"><span>Hoş geldin</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:26px;background:transparent;font-weight:400;color:#7A5E51"><span>Harita.canvas</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:26px;background:transparent;font-weight:400;color:#7A5E51"><span>Projeler.base</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:26px;background:transparent;font-weight:400;color:#7A5E51"><span>Sunum</span></div>
+<div style="display:flex;align-items:center;gap:6px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;padding-left:26px;background:transparent;font-weight:400;color:#7A5E51"><span>Uzun not</span></div>
+</div>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; background: #FFF9F5">
+<div role="tablist" style="display: flex; align-items: flex-end; gap: 2px; padding: 8px 12px 0; background: #FFF1E8; border-bottom: 1px solid #F3DDCF; overflow-x: auto">
+<button role="tab" aria-selected="true" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border: 1px solid #F3DDCF; border-bottom: 0; border-radius: 10px 10px 0 0; background: #FFF9F5; box-shadow: inset 0 2px 0 #FFBE98; font-weight: 500; cursor: pointer">Hoş geldin<span aria-hidden="true" style="color: #7A5E51">×</span></button>
+<button role="tab" aria-selected="false" style="height: 34px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: transparent; color: #7A5E51; cursor: pointer">Wikilinks</button>
+<button role="tab" aria-selected="false" style="height: 34px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: transparent; color: #7A5E51; cursor: pointer">Graph view</button>
+</div>
+
+<div style="flex: 1; padding: 20px 32px 40px; overflow: auto">
+<div style="max-width: 720px; margin: 0 auto">
+<div style="font-size: 12px; color: #7A5E51; margin-bottom: 28px">nectar-test-vault  /  Hoş geldin</div>
+
+<div style="display: grid; grid-template-columns: 110px 1fr; gap: 8px 12px; align-items: center; padding: 12px 0 16px; margin-bottom: 20px; border-bottom: 1px solid #F3DDCF; font-size: 13px">
+<span style="color: #7A5E51">tags</span>
+<div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="padding: 2px 10px; border-radius: 6px; background: #FFE0CC">vault</span><span style="padding: 2px 10px; border-radius: 6px; background: #FFE0CC">başlangıç</span></div>
+<span style="color: #7A5E51">aliases</span>
+<div>Ana sayfa, Index</div>
+</div>
+
+<h1 style="margin: 0 0 16px; font-size: 32px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em">Hoş geldin</h1>
+<p style="margin: 0 0 16px; font-size: 16px; line-height: 1.65">Bu vault, <strong>Nectar</strong>'ın Obsidian ile birebir aynı davranıp davranmadığını test etmek için hazırlandı. Her not bir özellik grubunu sınar: önce <a href="#" style="color: #B4471F; text-decoration: none; border-bottom: 1px solid #FFBE98">Temel biçimlendirme</a>, sonra <a href="#" style="color: #B4471F; text-decoration: none; border-bottom: 1px solid #FFBE98">Wikilinks</a>.</p>
+
+<div style="margin: 0 0 20px; padding: 14px 16px; border-radius: 10px; background: #FFF1E8; border: 1px solid #F3DDCF">
+<div style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #B4471F; margin-bottom: 4px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>İpucu</div>
+<div style="font-size: 15px; line-height: 1.6">Nectar tamamen bilgisayarında çalışır. Notların <span style="background: #FFBE98; color: #2E1F18; padding: 0 3px; border-radius: 3px">hiçbir zaman</span> dışarı çıkmaz.</div>
+</div>
+
+<h2 style="margin: 28px 0 10px; font-size: 22px; font-weight: 600; letter-spacing: -0.01em">Bugün</h2>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 16px">
+<label style="display: flex; align-items: center; gap: 10px"><input type="checkbox" checked disabled style="width: 16px; height: 16px; accent-color: #4F7A3D"><span style="color: #7A5E51; text-decoration: line-through">Araçları kur</span></label>
+<label style="display: flex; align-items: center; gap: 10px"><input type="checkbox" checked disabled style="width: 16px; height: 16px; accent-color: #4F7A3D"><span style="color: #7A5E51; text-decoration: line-through">GitHub reposunu aç</span></label>
+<label style="display: flex; align-items: center; gap: 10px"><input type="checkbox" disabled style="width: 16px; height: 16px; accent-color: #4F7A3D"><span>Şeftali mockup'ını onayla</span></label>
+</div>
+<p style="margin: 18px 0 0; font-size: 16px; line-height: 1.65">Geliştirmeyi başlatmak için <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 2px 6px; border-radius: 6px; background: #FFF1E8; border: 1px solid #F3DDCF">bun run dev</code> yeterli.</p>
+</div>
+</div>
+
+<footer style="display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 16px; padding: 6px 16px; border-top: 1px solid #F3DDCF; background: #FFF1E8; color: #7A5E51; font-size: 12px">
+<span>2 backlink</span><span>186 kelime</span><span>1.402 karakter</span>
+<span style="display: flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #4F7A3D"></span>Kaydedildi</span>
+</footer>
+</main>
+
+<aside aria-label="Sağ panel" style="flex: 1 1 248px; max-width: 290px; display: flex; flex-direction: column; gap: 22px; padding: 16px; background: #FFF1E8; border-left: 1px solid #F3DDCF">
+<section>
+<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #7A5E51; margin-bottom: 8px">Outline</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px">
+<span style="font-weight: 500">Hoş geldin</span>
+<span style="padding-left: 14px; color: #7A5E51">Markdown</span>
+<span style="padding-left: 14px; color: #7A5E51">Bağlantılar</span>
+<span style="padding-left: 14px; color: #7A5E51">Bugün</span>
+</div>
+</section>
+<section>
+<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #7A5E51; margin-bottom: 8px">Backlinks · 2</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF; border: 1px solid #F3DDCF; box-shadow: 0 1px 2px rgba(122,62,30,0.06)"><div style="font-weight: 600; margin-bottom: 2px">Graph testi</div><div style="color: #7A5E51; font-size: 12px">Projeler · …merkezde, büyük bir düğüm olarak görünmeli.</div></div>
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF; border: 1px solid #F3DDCF; box-shadow: 0 1px 2px rgba(122,62,30,0.06)"><div style="font-weight: 600; margin-bottom: 2px">BENİ OKU</div><div style="color: #7A5E51; font-size: 12px">Başlangıç noktası: Hoş geldin</div></div>
+</div>
+</section>
+<section>
+<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #7A5E51; margin-bottom: 8px">Yerel graph</div>
+<div style="height: 190px; border-radius: 10px; background: #FFFFFF; border: 1px solid #F3DDCF; overflow: hidden">
+<svg role="img" aria-label="Hoş geldin notunun bağlantı grafiği" width="100%" height="190" viewBox="0 0 240 190">
+<g stroke="#F3DDCF" stroke-width="1.5"><line x1="120" y1="95" x2="52" y2="48"/><line x1="120" y1="95" x2="190" y2="42"/><line x1="120" y1="95" x2="206" y2="120"/><line x1="120" y1="95" x2="150" y2="162"/><line x1="120" y1="95" x2="60" y2="146"/><line x1="120" y1="95" x2="34" y2="98"/><line x1="190" y1="42" x2="206" y2="120"/></g>
+<g fill="#7A5E51"><circle cx="52" cy="48" r="5"/><circle cx="190" cy="42" r="6"/><circle cx="206" cy="120" r="5"/><circle cx="150" cy="162" r="4"/><circle cx="60" cy="146" r="5"/><circle cx="34" cy="98" r="4"/></g>
+<circle cx="120" cy="95" r="11" fill="#FFBE98" stroke="#B4471F" stroke-width="2"/>
+</svg>
+</div>
+</section>
+</aside>
+</div>
+</body>
+</html>
