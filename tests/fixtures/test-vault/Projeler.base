@@ -1,0 +1,31 @@
+filters:
+  and:
+    - file.hasTag("proje")
+formulas:
+  gun_sayisi: '(today() - date(başlangıç)).days'
+properties:
+  durum:
+    displayName: Durum
+  öncelik:
+    displayName: Öncelik
+views:
+  - type: table
+    name: Tüm projeler
+    order:
+      - file.name
+      - durum
+      - öncelik
+      - formula.gun_sayisi
+  - type: cards
+    name: Kartlar
+    order:
+      - file.name
+      - durum
+  - type: table
+    name: Aktif olanlar
+    filters:
+      and:
+        - 'durum == "aktif"'
+    order:
+      - file.name
+      - öncelik

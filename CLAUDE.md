@@ -11,6 +11,16 @@ The maintainer is Demirkan. **Talk to him in Turkish.** Code, comments, commit m
 - `docs/ARCHITECTURE.md` — how launcher, server and UI fit together; API contract.
 - `docs/DESIGN.md` — the "Şeftali" (peach) design system. Never hard-code colors; use the CSS variables.
 - `SECURITY.md` — threat model. Security rules below are non-negotiable.
+- `docs/design/mockup-light.png` and `mockup-dark.png` (+ `.html` sources) — approved look of the main screen.
+  Match its layout and feel; `docs/DESIGN.md` stays the source of truth for tokens.
+
+## Test vault and expected behavior
+- `tests/fixtures/test-vault/` is the reference vault (29 notes, canvas, base, attachments, a security note).
+  Start at `Hoş geldin.md`; each note says what it tests. Unit and e2e tests use it.
+- Tests must never modify it in place: copy it to a temp directory first.
+- Demirkan does not use Obsidian. Expected behavior comes from https://obsidian.md/help — read the relevant
+  page before implementing a feature and link it in the PR. Do not ask him how Obsidian behaves.
+- `01 Markdown/Güvenlik testi.md` must render with nothing executed and no network request made; keep an e2e test for it.
 
 ## Final decisions (do not ask about these again)
 Full log with reasons: `docs/DECISIONS.md`.
